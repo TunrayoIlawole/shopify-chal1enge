@@ -1,0 +1,36 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lateef&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" href = "index.css" />
+    <title>The shoppies</title>
+</head>
+<body>
+    <div class = "container">
+        <div class = "banner">
+            <h2>You've Nominated Five Movies!</h2>
+            <p>Click on the heart to view them</p>
+        </div>
+        <header>
+            <h1>The Shoppies</h1>
+            <p class = "heart">🤍</p>
+        </header>
+        <div class = "cart"></div>
+
+        <form id = "form" class = "form">
+            <input type = "search" class = "search" placeholder = "Search for a movie to nominate">
+        </form>
+
+        <div class = "loader-con"></div>
+        <div class = "result"></div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src = "Functions/api.js"></script>
+    <script src = "index.js"></script>
+</body>
+</html>
