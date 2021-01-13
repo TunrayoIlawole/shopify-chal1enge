@@ -1,5 +1,5 @@
-import getResults from './Functions/getResults';
-import displayResult from './Functions/displayResult';
+import getResults from './functions/getResults';
+import displayResult from './functions/displayResult';
 
 const domElements = {
     form: document.getElementById('form'),
