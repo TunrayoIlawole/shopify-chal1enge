@@ -7,7 +7,8 @@ const domElements = {
     results: document.querySelector('.result'),
     heart: document.querySelector('.heart'),
     cart: document.querySelector('.cart'),
-    loader: document.querySelector('.loader-con')
+    loader: document.querySelector('.loader-con'),
+    erroMsg: document.querySelector('.error')
 }
 
 const loader = `
@@ -29,13 +30,12 @@ function handleSubmit(e) {
         const results = getResults(searchQuery);
         results.then(response => {
             const movies = response.Search;
-            console.log(movies);
             const loader = document.querySelector('.loader');
             if (loader) {
                 loader.parentElement.removeChild(loader);
             }
             displayResult(movies);
-        })
+        });
 
     }
     catch (error) {
@@ -48,4 +48,18 @@ domElements.form.addEventListener('submit', handleSubmit);
 
 domElements.heart.addEventListener('click', () => {
     domElements.cart.classList.toggle('show');
-})
+});
+
+domElements.input.addEventListener('search', () => {
+    if (domElements.input.innerHTML === '') {
+        domElements.erroMsg.innerHTML = '';
+        domElements.results.innerHTML = '';
+    }
+});
+
+domElements.input.addEventListener('input', () => {
+    if (domElements.input.innerHTML === '') {
+        domElements.erroMsg.innerHTML = '';
+        domElements.results.innerHTML = '';
+    }
+});
