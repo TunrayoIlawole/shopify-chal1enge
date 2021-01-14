@@ -167,11 +167,16 @@ header {
     }
 }
 
+.error {
+    text-align: center;
+}
+
 .result {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     row-gap: 20px;
+    text-align: center;
     justify-content: center;
     align-content: center;
 }
